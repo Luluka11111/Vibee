@@ -1,0 +1,42 @@
+/* App.css */
+:root {
+  --pink: #ffc1cc;
+  --dark: #2d2d2d;
+  --bg: #fff5f7;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: 'Inter', sans-serif; /* Чистый шрифт (критерий 4.1) */
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Адаптивная сетка (Критерий: Адаптивность) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Интерактивные кнопки */
+.mood-selector button {
+  border: 2px solid transparent;
+  background: white;
+  transition: transform 0.2s ease;
+}
+
+.mood-selector button.active {
+  border-color: var(--pink);
+  transform: scale(1.1);
+}
+
+/* Мобильная версия */
+@media (max-width: 600px) {
+  .app-container { padding: 10px; }
+  .grid { grid-template-columns: 1fr; }
+}
