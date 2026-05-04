@@ -5,7 +5,7 @@ import { format, startOfMonth, endOfMonth, eachDayOfInterval, addMonths, subMont
 import { X, Heart, Power, ArrowRight, Folder, Music, Camera, FileText, Plus, ChevronLeft, ChevronRight } from 'lucide-react';
 import './index.css';
 
-const API = 'https://vibee-u9ji.onrender.com';
+const API = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
 // --- КОМПОНЕНТ ДЛЯ ОШИБКИ 404 ---
 const NotFound = () => (
